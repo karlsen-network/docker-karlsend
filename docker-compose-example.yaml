@@ -1,0 +1,15 @@
+version: "3"
+
+services:
+  kaspad:
+    container_name: kaspad
+    image: karlsennetwork/kaspad:v0.11.11_1
+    restart: unless-stopped
+    ports:
+      - "42110:42110/tcp"
+      - "42111:42111/tcp"
+#    volumes:
+#      # If specified, directory must be writable by uid=51591:
+#      - /var/kaspad/:/app/data/
+#    command: /app/kaspad --utxoindex --enablebanning --whitelist=192.168.1.0/24
+
